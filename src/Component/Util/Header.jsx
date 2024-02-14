@@ -21,24 +21,23 @@ const Header = () => {
 
   return (
     <header className="bg-gray-800 py-4 container mx-auto
-    rounded-lg shadow-xl z-10"  style={{ width: '95%' }}>
+    rounded-lg shadow-xl z-10"  style={{ width: '90%' }}>
       <nav className="container mx-auto flex items-center justify-between " >
 
       <div className="ml-4"></div>
         <Link to="/" className="flex items-center text-white" >
-          <img src="/src/image/fkheaderlogo_exploreplus-44005d.svg" alt="logo" className="h-15" />
+          <img src="/src/images/Flipkart-Logo.png" alt="logo" className="h-15 " />
           <span className="text-xl font-semibold"></span>
         </Link>
 
 
-
           {/* Search bar */}
           <div className="flex items-center relative">
-              <i className="fas fa-search absolute left-0 ml-3 text-gray-400"></i> {/* Search icon */}
+              <i className="fas fa-search absolute left-0 ml-3 text-gray-300"></i> {/* Search icon */}
               <input
                 type="text"
                 placeholder='Search for Products,Brands and more..... '
-                style={{ width: '800px' }}
+                style={{ width: '550px' }}
                 className="px-3 py-1 rounded-md border border-gray-500 pl-10" // Add pl-10 class for left padding to accommodate the icon
               />
             </div>
@@ -62,13 +61,13 @@ const Header = () => {
                <span className="ml-4"></span>
               <button className="text-white bg-blue-500 hover:bg-blue-600 px-2 py-1 rounded-md">Signup</button>
                </Link>
-               <Link to="/profile" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 flex items-center">
+               <Link to="/profile" className=" text-gray-800 hover:bg-gray-200 flex items-center">
                   <i className="fas fa-user-circle mr-2"></i>My Profile
                 </Link>
-                <Link to="/orders" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 flex items-center">
+                <Link to="/orders" className=" text-gray-800 hover:bg-gray-200 flex items-center">
                   <i className="fas fa-shopping-bag mr-2"></i>Orders
                 </Link>
-                <Link to="/wishlist" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 flex items-center">
+                <Link to="/wishlist" className=" text-gray-800 hover:bg-gray-200 flex items-center">
                   <i className="fas fa-heart mr-2"></i>Wishlist
                 </Link>
               </div>
@@ -92,40 +91,27 @@ const Header = () => {
           <div className="ml-4"></div>
 
 
-          {/* more options */}
-          {/* <span style={{ fontWeight: 'bold' }}>⋮</span>
-          <div className="ml-4"></div> */}
-
-
            <div className="relative">
             <button onClick={toggleThreeDotsDropdown } className="hover:text-gray-300 flex items-center">
-              <span style={{ fontWeight: 'bold', fontSize: '20px', }}>⋮</span>
+              <span style={{ fontWeight: 'normal', fontSize: '15px', }}>More</span>
             </button>
             {isThreeDotsDropdownOpen && (
               <div className="absolute right-0 mt-2 py-2 w-48 bg-white border rounded-lg shadow-xl z-10">
-                <Link to="/notification-preference" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 flex items-center" style={{ width: '190px' }}>
+                <Link to="/notification-preference" className=" text-gray-800 hover:bg-gray-200 flex items-center" style={{ width: '190px' }}>
                   <i className="fas fa-bell mr-2"></i>Notification Preference
                 </Link>
-                <Link to="/customer-care" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 flex items-center">
+                <Link to="/customer-care" className=" text-gray-800 hover:bg-gray-200 flex items-center">
                   <i className="fas fa-headset mr-2"></i>24x7 Customer Care
                 </Link>
-                <Link to="/advertize" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 flex items-center">
+                <Link to="/advertize" className=" text-gray-800 hover:bg-gray-200 flex items-center">
                   <i className="fas fa-ad mr-2"></i>Advertize
                 </Link>
-                <Link to="/download-app" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 flex items-center">
+                <Link to="/download-app" className=" text-gray-800 hover:bg-gray-200 flex items-center">
                   <i className="fas fa-download mr-2"></i>Download App
                 </Link>
               </div>
             )}
           </div>
-
-
-
-          <div className="ml-4"></div>
-
-
-
-
         </div>
       </nav>
     </header>
